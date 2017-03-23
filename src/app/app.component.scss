@@ -1,0 +1,10 @@
+@import 'src/scss/variables';
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.view-container {
+  background-color: #fff;
+}

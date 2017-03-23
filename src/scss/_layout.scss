@@ -1,0 +1,51 @@
+@import './mixins/scrolling';
+
+html {
+  width: 100%;
+  height: 100%;
+
+  text-size-adjust: 100%;
+}
+
+body {
+  position: fixed;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-user-drag: none;
+
+  -ms-content-zooming: none;
+  touch-action: manipulation;
+
+  word-wrap: break-word;
+
+  text-size-adjust: none;
+  // user-select: none;
+}
+
+ion-split-panel {
+  &.split-panel-visible xc-sidebar {
+    overflow-y: hidden;
+  }
+
+  xc-sidebar {
+    @include scroll-area;
+  }
+}
+
+.flex-filler {
+  height: 0;
+  margin: 0;
+}

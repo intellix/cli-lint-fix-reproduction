@@ -1,0 +1,41 @@
+@import '../variables';
+
+@mixin scrollbar {
+  // TODO: Remove this for mobiles as it causes 9px right gutter
+	&::-webkit-scrollbar {
+		width: 9px;
+	}
+
+	&::-webkit-scrollbar-track {
+    border-radius: 5px;
+		background: rgba($gray, .1);
+	}
+
+	&::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+		background: rgba($gray, .3);
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background: rgba($gray, .4);
+	}
+
+	&::-webkit-scrollbar-thumb:window-inactive {
+		background: rgba($gray, .1);
+	}
+}
+
+@mixin no-scrollbar {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@mixin scroll-area {
+  @include scrollbar;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}

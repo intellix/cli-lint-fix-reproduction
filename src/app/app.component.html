@@ -1,0 +1,13 @@
+<ion-split-panel when="large">
+  <ion-menu [content]="content">
+    Sidebar
+  </ion-menu>
+
+  <section class="view-container" #content fxFill fxFlex fxLayout="column">
+    <section fxLayout="row-reverse" fxFlex>
+      <section fxFlex>
+        <router-outlet></router-outlet>
+      </section>
+    </section>
+  </section>
+</ion-split-panel>
